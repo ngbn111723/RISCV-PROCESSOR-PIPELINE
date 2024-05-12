@@ -1,0 +1,28 @@
+.text
+
+#A PROGRAM CHECKS HAZARDS JAL JALR INSTRUCTIONS
+
+Main:
+		addi x1, x0, 1 
+		add x2, x0, x1  
+		sw  x2 ,0(x0)  
+		lw  x3 ,0(x0)  
+		addi x4, x0, 1 
+		beq  x4, x2, check_beq 
+		addi x6, x0, 1 
+		addi x6, x0, 1 
+		addi x6, x0, 1 
+check_beq:	
+		addi x5, x0, 1 
+		lw   x9, 0(x0) 
+		add  x8, x9, x7 
+		jal  x12, check_jal 
+		addi x6, x0, 1 
+check_jal:	
+		addi x6, x0, 2 
+		addi x7, x0, 0x40 
+		jalr x11, x7, 0xc 
+		addi x10, x0, 1 
+		addi x10, x0, 2 
+		addi x10, x0, 3 
+End: 

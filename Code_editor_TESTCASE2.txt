@@ -1,0 +1,15 @@
+.text
+
+#The program checks load and store instructions
+
+Main:
+	addi x1, x0, 0xfff
+	sw   x1, 0(x0)
+	lw   x2, 0(x0)
+	lb   x3, 0(x0)
+	lh   x4, 0(x0)
+	lbu  x5, 0(x0)
+	lhu  x6, 0(x0)
+	sh   x1, 4(x0)  
+	sb   x1, 8(x0)	
+End: 

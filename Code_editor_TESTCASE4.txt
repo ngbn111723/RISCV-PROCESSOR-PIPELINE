@@ -1,0 +1,19 @@
+.text
+
+# A PROGRAM CHECKS BRANCH INSTRUCTIONS
+
+Main:
+	addi x1, x0, 2
+	addi x2, x0, 2
+	lui  x3, 0x1	
+	auipc x4, 0x1
+	andi  x5, x1, 3
+	xori  x6, x1, 3
+	ori   x12, x1, 3
+	slti  x7, x1, 3
+	sltiu x8, x1, -3
+	slli  x9, x1, 1
+	srli  x10, x1, 1
+	srai  x11, x1, 1
+	
+End:
